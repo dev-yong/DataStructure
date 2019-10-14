@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FCC06E7A2353FB9800DA40BC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E792353FB9800DA40BC /* main.cpp */; };
+		FCC06E822353FBBC00DA40BC /* BinarySaerchNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E812353FBBC00DA40BC /* BinarySaerchNode.cpp */; };
+		FCC06E9D2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E9C2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp */; };
+		FCC06E9E2354922900DA40BC /* AbstractList_LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E8A2354572300DA40BC /* AbstractList_LinkedList.cpp */; };
+		FCC06E9F2354923000DA40BC /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E8E2354576C00DA40BC /* LinkedList.cpp */; };
+		FCC06EA02354923200DA40BC /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E912354580300DA40BC /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,12 @@
 /* Begin PBXFileReference section */
 		FCC06E762353FB9800DA40BC /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC06E792353FB9800DA40BC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FCC06E812353FBBC00DA40BC /* BinarySaerchNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySaerchNode.cpp; sourceTree = "<group>"; };
+		FCC06E88235456EC00DA40BC /* AbstractList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AbstractList.hpp; sourceTree = "<group>"; };
+		FCC06E8A2354572300DA40BC /* AbstractList_LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractList_LinkedList.cpp; sourceTree = "<group>"; };
+		FCC06E8E2354576C00DA40BC /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		FCC06E912354580300DA40BC /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		FCC06E9C2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractList_TwoEndedArray.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +68,39 @@
 		FCC06E782353FB9800DA40BC /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				FCC06E8D2354576400DA40BC /* LinkedList */,
+				FCC06E832354551E00DA40BC /* List */,
+				FCC06E802353FBAB00DA40BC /* BinarySearchTree */,
 				FCC06E792353FB9800DA40BC /* main.cpp */,
 			);
 			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		FCC06E802353FBAB00DA40BC /* BinarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				FCC06E812353FBBC00DA40BC /* BinarySaerchNode.cpp */,
+			);
+			path = BinarySearchTree;
+			sourceTree = "<group>";
+		};
+		FCC06E832354551E00DA40BC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				FCC06E88235456EC00DA40BC /* AbstractList.hpp */,
+				FCC06E8A2354572300DA40BC /* AbstractList_LinkedList.cpp */,
+				FCC06E9C2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		FCC06E8D2354576400DA40BC /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				FCC06E8E2354576C00DA40BC /* LinkedList.cpp */,
+				FCC06E912354580300DA40BC /* Node.cpp */,
+			);
+			path = LinkedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC06E822353FBBC00DA40BC /* BinarySaerchNode.cpp in Sources */,
+				FCC06E9D2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp in Sources */,
+				FCC06E9F2354923000DA40BC /* LinkedList.cpp in Sources */,
+				FCC06EA02354923200DA40BC /* Node.cpp in Sources */,
+				FCC06E9E2354922900DA40BC /* AbstractList_LinkedList.cpp in Sources */,
 				FCC06E7A2353FB9800DA40BC /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
