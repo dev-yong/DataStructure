@@ -34,6 +34,7 @@ public:
     Type pop_front();
     void push_back(Type element);
     Type pop_back();
+    LinkedList<Type>& operator = (const LinkedList<Type>& rhs);
     void insert(int index, Type element);
     bool remove(Type element);
     void clear();
@@ -148,6 +149,22 @@ Type LinkedList<Type>::pop_back() {
             }
         }
     }
+}
+template <typename Type>
+LinkedList<Type>& LinkedList<Type>::operator = (const LinkedList& rhs) {
+    this->clear();
+    if (rhs.isEmpty()) {
+        return *this;
+    }
+    this->push_front(rhs.front());
+    Node<Type>* lhsNode = this->head;
+    for(Node<Type>* rhsNode = rhs.head;
+        rhsNode->next != 0;
+        rhsNode = rhsNode->next) {
+        this->push_back(rhsNode->next->retrieve());
+        lhsNode = lhsNode->next;
+    }
+    return *this;
 }
 template <typename Type>
 void LinkedList<Type>::insert(int index, Type element) {
