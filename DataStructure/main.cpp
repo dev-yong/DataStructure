@@ -36,6 +36,19 @@ void testAbstractSortedList_BST() {
                        
     delete sortedList;
 }
+void testBST() {
+    BinarySearchTree<int> bst;
+    bst.insert(5);
+    bst.insert(3);
+    bst.insert(4);
+    bst.insert(2);
+    bst.insert(10);
+    bst.insert(8);
+    bst.log();
+    bst.remove(5);
+    bst.log();
+    cout<<bst.height()<<endl;
+}
 
 
 int main() {
@@ -43,6 +56,8 @@ int main() {
     testAbstractList_LinkedList();
 
     testAbstractSortedList_BST();
+
+    testBST();
     
     return 0;
 }
