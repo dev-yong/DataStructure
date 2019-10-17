@@ -43,6 +43,7 @@
 		FCC06E9C2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractList_TwoEndedArray.cpp; sourceTree = "<group>"; };
 		FCC534FF23583B1400CFAF37 /* BinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySearchTree.cpp; sourceTree = "<group>"; };
 		FCC5350023583B1400CFAF37 /* BinarySaerchNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySaerchNode.cpp; sourceTree = "<group>"; };
+		FCC5350323583BEB00CFAF37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		FCC06E782353FB9800DA40BC /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				FCC5350323583BEB00CFAF37 /* README.md */,
 				FC7842CE23581A06002F6396 /* AbstractDataType.hpp */,
 				FCC06E832354551E00DA40BC /* List */,
 				FCC06E8D2354576400DA40BC /* LinkedList */,
