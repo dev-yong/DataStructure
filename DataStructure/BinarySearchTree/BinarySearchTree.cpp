@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "BinarySaerchNode.cpp"
+#include <queue>
 
 template <typename Type>
 class BinarySearchTree {
@@ -44,6 +45,31 @@ public:
         }
         return find(root, element);
     }
+    int height() {
+        if (this->isEmpty()) {
+            return -1;
+        }
+        return height(this->root);
+    }
+    void log() {
+        if (this->isEmpty()) {
+            cout << "Tree is empty";
+        }
+        queue<BinarySearchNode<Type>*> queue;
+        queue.push(this->root);
+        while(!queue.empty()) {
+            BinarySearchNode<Type>* node = queue.front();
+            cout << node->retrieve() << " ";
+            queue.pop();
+            if (node->hasLeft()) {
+                queue.push(node->left);
+            }
+            if (node->hasRight()) {
+                queue.push(node->right);
+            }
+        }
+        cout << endl;
+    }
     // MARK: Mutators
     void insert(Type element) {
         if (isEmpty()) {
@@ -67,7 +93,6 @@ public:
         }
         this->clear(this->root);
     }
-
 private:
     //MARK:- private
     BinarySearchNode<Type>* minimum(BinarySearchNode<Type>*& node) {
@@ -90,6 +115,19 @@ private:
         else {
             return false;
         }
+    }
+    int height(BinarySearchNode<Type>*& node, int depth = 0) {
+        if (node->isLeaf()) {
+            return depth;
+        }
+        int height = 0;
+        if (node->hasLeft()) {
+            return max(height, this->height(node->left, depth + 1));
+        }
+        if (node->hasRight()) {
+            return max(height, this->height(node->right, depth + 1));
+        }
+        return height;
     }
     void insert(BinarySearchNode<Type>* current, Type& element) {
         if (current->retrieve() > element) {
@@ -127,6 +165,10 @@ private:
                 newNode->parent = current->parent;
                 newNode->left = current->left;
                 newNode->right = current->right;
+                if (current == this->root) {
+                    this->root = newNode;
+                }
+                delete current;
             }
             else if (current->hasLeft() && !current->hasRight()) {
                 removeWhenHasOnlyLeft(current);
