@@ -17,7 +17,7 @@ template <typename Type>
 class AbstractSortedList {
 
 public:
-    virtual ~AbstractSortedList() = 0;
+    virtual ~AbstractSortedList() {};
     virtual bool isEmpty() = 0;
     virtual Type minimum() = 0;
     virtual Type maximum() = 0;
