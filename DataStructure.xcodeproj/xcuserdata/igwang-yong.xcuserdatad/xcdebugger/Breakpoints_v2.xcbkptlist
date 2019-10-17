@@ -23,6 +23,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "DE6BC6ED-8096-402C-BA8F-FD5A80A23E42"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -37,6 +38,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+=======
+>>>>>>> Tree/BST
             uuid = "15FD56D6-A4A5-4C23-8386-176B28122737"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -69,6 +72,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "84835454-AF8A-469B-96C6-EEDD7A2D7943"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -85,6 +89,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+=======
+>>>>>>> Tree/BST
             uuid = "DC454CF9-03DE-487E-9628-BCDFD079FF01"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -164,6 +170,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
             uuid = "698F2104-F137-4E67-8179-F58E2B2ED206"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -175,6 +182,19 @@
             endingLineNumber = "128"
             landmarkName = "push_back(element)"
             landmarkType = "9">
+=======
+            uuid = "B1A2056B-F9C3-4325-923D-F2279103B52D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataStructure/BinarySearchTree/BinarySearchTree.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "clear(current)"
+            landmarkType = "7">
+>>>>>>> Tree/BST
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

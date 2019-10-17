@@ -7,23 +7,57 @@
 //
 
 #include <iostream>
-//#include "AbstractList.hpp"
-//#include "List/AbstractList_LinkedList.cpp"
-#include "LinkedList/LinkedList.cpp"
+#include "AbstractDataType.hpp"
 
 using namespace std;
 
-int main() {
-    LinkedList<int> list1;
-    LinkedList<int> list2;
-    for(int i = 0; i<10; i++) {
-        list1.push_back(i);
-        list2.push_back(i * 10);
-    }
-    list1.log();
-    list2.log();
-    list1 = list2;
-    list1.log();
+void testAbstractList_LinkedList() {
+    AbstractList<int>* list = new AbstractList_LinkedList<int>();
+    list->insertAfter(0, 1);
+    list->insertAfter(0, 2);
+    list->insertAfter(0, 3);
+    list->insertAfter(0, 4);
+    list->insertAfter(0, 5);
+    list->insertAfter(0, 6);
+    list->insertAfter(0, 7);
+    list->insertAfter(0, 8);
+    list->log();
+    delete list;
+}
 
+void testAbstractSortedList_BST() {
+    AbstractSortedList<int>* sortedList = new AbstractSortedList_BST<int>();
+    sortedList->insert(5);
+    sortedList->insert(3);
+    sortedList->insert(4);
+    sortedList->insert(2);
+    sortedList->insert(10);
+    sortedList->insert(8);
+                       
+    delete sortedList;
+}
+void testBST() {
+    BinarySearchTree<int> bst;
+    bst.insert(5);
+    bst.insert(3);
+    bst.insert(4);
+    bst.insert(2);
+    bst.insert(10);
+    bst.insert(8);
+    bst.log();
+    bst.remove(5);
+    bst.log();
+    cout<<bst.height()<<endl;
+}
+
+
+int main() {
+
+    testAbstractList_LinkedList();
+
+    testAbstractSortedList_BST();
+
+    testBST();
+    
     return 0;
 }
