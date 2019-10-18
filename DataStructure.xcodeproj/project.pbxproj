@@ -16,6 +16,7 @@
 		FCC06E7A2353FB9800DA40BC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E792353FB9800DA40BC /* main.cpp */; };
 		FCC5350123583B1400CFAF37 /* BinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC534FF23583B1400CFAF37 /* BinarySearchTree.cpp */; };
 		FCC5350223583B1400CFAF37 /* BinarySaerchNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC5350023583B1400CFAF37 /* BinarySaerchNode.cpp */; };
+		FCC53508235879B400CFAF37 /* BinaryHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC53507235879B400CFAF37 /* BinaryHeap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +44,9 @@
 		FCC06E9C2354906F00DA40BC /* AbstractList_TwoEndedArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractList_TwoEndedArray.cpp; sourceTree = "<group>"; };
 		FCC534FF23583B1400CFAF37 /* BinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySearchTree.cpp; sourceTree = "<group>"; };
 		FCC5350023583B1400CFAF37 /* BinarySaerchNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySaerchNode.cpp; sourceTree = "<group>"; };
-		FCC5350323583BEB00CFAF37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCC535042358798100CFAF37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCC53507235879B400CFAF37 /* BinaryHeap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryHeap.cpp; sourceTree = "<group>"; };
+		FCC5350E23587A6200CFAF37 /* AbstractPriorityQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AbstractPriorityQueue.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		FCC06E6D2353FB9800DA40BC = {
 			isa = PBXGroup;
 			children = (
+				FCC535042358798100CFAF37 /* README.md */,
 				FCC06E782353FB9800DA40BC /* DataStructure */,
 				FCC06E772353FB9800DA40BC /* Products */,
 			);
@@ -76,11 +80,12 @@
 		FCC06E782353FB9800DA40BC /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				FCC5350323583BEB00CFAF37 /* README.md */,
 				FC7842CE23581A06002F6396 /* AbstractDataType.hpp */,
 				FCC06E832354551E00DA40BC /* List */,
 				FCC06E8D2354576400DA40BC /* LinkedList */,
+				FCC53509235879B900CFAF37 /* PriorityQueue */,
 				FCC534FE23583B1400CFAF37 /* BinarySearchTree */,
+				FCC53506235879A400CFAF37 /* BinaryHeap */,
 				FCC06E792353FB9800DA40BC /* main.cpp */,
 			);
 			path = DataStructure;
@@ -114,6 +119,22 @@
 				FCC5350023583B1400CFAF37 /* BinarySaerchNode.cpp */,
 			);
 			path = BinarySearchTree;
+			sourceTree = "<group>";
+		};
+		FCC53506235879A400CFAF37 /* BinaryHeap */ = {
+			isa = PBXGroup;
+			children = (
+				FCC53507235879B400CFAF37 /* BinaryHeap.cpp */,
+			);
+			path = BinaryHeap;
+			sourceTree = "<group>";
+		};
+		FCC53509235879B900CFAF37 /* PriorityQueue */ = {
+			isa = PBXGroup;
+			children = (
+				FCC5350E23587A6200CFAF37 /* AbstractPriorityQueue.hpp */,
+			);
+			path = PriorityQueue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +200,7 @@
 				FC7842D1235824DA002F6396 /* LinkedList.cpp in Sources */,
 				FC7842D5235824DA002F6396 /* AbstractSortedList_BST.cpp in Sources */,
 				FC7842D3235824DA002F6396 /* AbstractList_LinkedList.cpp in Sources */,
+				FCC53508235879B400CFAF37 /* BinaryHeap.cpp in Sources */,
 				FCC06E7A2353FB9800DA40BC /* main.cpp in Sources */,
 				FC7842D7235824DA002F6396 /* (null) in Sources */,
 				FC7842D4235824DA002F6396 /* AbstractList_TwoEndedArray.cpp in Sources */,

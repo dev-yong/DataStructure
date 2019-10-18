@@ -49,6 +49,15 @@ void testBST() {
     bst.log();
     cout<<bst.height()<<endl;
 }
+void testBinaryHeap() {
+    BinaryHeap<int> binaryheap;
+    binaryheap.insert(8);
+    binaryheap.insert(4);
+    binaryheap.insert(12);
+    binaryheap.insert(2);
+    binaryheap.insert(10);
+    binaryheap.remove(10);
+}
 
 
 int main() {
@@ -58,6 +67,8 @@ int main() {
     testAbstractSortedList_BST();
 
     testBST();
-    
+
+    testBinaryHeap();
+
     return 0;
 }

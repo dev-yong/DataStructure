@@ -18,5 +18,7 @@
 // MARK: AbstractSortedList
 #include "List/AbstractSortedList.hpp"
 #include "List/AbstractSortedList_BST.cpp"
+// MARK: AbstractPriorityQueue
+#include "PriorityQueue/AbstractPriorityQueue.hpp"
 
 #endif /* AbstractDataType_hpp */

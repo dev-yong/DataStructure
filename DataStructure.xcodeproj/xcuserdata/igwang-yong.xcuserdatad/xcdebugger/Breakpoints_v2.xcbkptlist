@@ -7,194 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C40763E6-1B19-4F47-B63D-771BC7167A1D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/LIst/LinkedList/LinkedList.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
-            landmarkName = "clear()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-<<<<<<< HEAD
-            uuid = "DE6BC6ED-8096-402C-BA8F-FD5A80A23E42"
+            uuid = "09BF7C31-4986-4ACF-A2E7-F9622ADFD4C0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataStructure/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-=======
->>>>>>> Tree/BST
-            uuid = "15FD56D6-A4A5-4C23-8386-176B28122737"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/LIst/LinkedList/LinkedList.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "clear()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "testBinaryHeap()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F4AD0B9D-5BAB-4908-B072-F5EFB56EC015"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/LIst/LinkedList/LinkedList.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "log()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-<<<<<<< HEAD
-            uuid = "84835454-AF8A-469B-96C6-EEDD7A2D7943"
+            uuid = "6FAACA36-78A7-46B9-8EA2-081E002008FF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataStructure/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "main()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "testBinaryHeap()"
             landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-=======
->>>>>>> Tree/BST
-            uuid = "DC454CF9-03DE-487E-9628-BCDFD079FF01"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/List/AbstractList_LinkedList.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "~ AbstractList_LinkedList()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DC454CF9-03DE-487E-9628-BCDFD079FF01 - 4118142d8446a3c9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AbstractList_LinkedList&lt;int&gt;::~AbstractList_LinkedList()"
-                  moduleName = "DataStructure"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/DataStructure/DataStructure/List/AbstractList_LinkedList.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "DC454CF9-03DE-487E-9628-BCDFD079FF01 - 4118142d8446a3c9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AbstractList_LinkedList&lt;int&gt;::~AbstractList_LinkedList()"
-                  moduleName = "DataStructure"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/DataStructure/DataStructure/List/AbstractList_LinkedList.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "DC454CF9-03DE-487E-9628-BCDFD079FF01 - 4118142d8446a3c9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AbstractList_LinkedList&lt;int&gt;::~AbstractList_LinkedList()"
-                  moduleName = "DataStructure"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/iOS%20Development/PROJECT/DataStructure/DataStructure/List/AbstractList_LinkedList.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "27">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9E428A3B-330D-4E39-85DF-D67E3CE7A5AF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/List/AbstractList_LinkedList.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "~ AbstractList_LinkedList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-<<<<<<< HEAD
-            uuid = "698F2104-F137-4E67-8179-F58E2B2ED206"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/LinkedList/LinkedList.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "push_back(element)"
-            landmarkType = "9">
-=======
-            uuid = "B1A2056B-F9C3-4325-923D-F2279103B52D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataStructure/BinarySearchTree/BinarySearchTree.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "clear(current)"
-            landmarkType = "7">
->>>>>>> Tree/BST
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
