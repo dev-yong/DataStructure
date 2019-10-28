@@ -17,9 +17,9 @@ class AbstractPriorityQueue {
 
 public:
     virtual ~AbstractPriorityQueue() {};
-    Type front();
-    void pop();
-    void push(Type element);
+    virtual Type front() = 0;
+    virtual int pop() = 0;
+    virtual void push(Type element) = 0;
 
 };
 
