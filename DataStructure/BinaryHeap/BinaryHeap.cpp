@@ -17,87 +17,104 @@ class BinaryHeap {
 public:
     //MARK:- public
     //MARK: constructor
-    BinaryHeap() {};
+    BinaryHeap(function<bool(Type, Type)> compare = [](Type lhs, Type rhs) { return lhs < rhs; });
+    ~BinaryHeap();
     //MARK: Accessors
-    Type minimum();
-    Type maximum();
+    bool isEmpty();
+    Type top();
+    Type*& sorted();
     //MARK: Mutators
-    void insert(Type element);
-    void remove(Type element);
+    void push(Type element);
+    Type pop();
 
 private:
     //MARK:- private
     void upheap(int index);
     void downheap(int index);
     vector<Type> elements;
+    function<Type(Type, Type)> compare;
 
 };
 
 template <typename Type>
-Type BinaryHeap<Type>::minimum() {
-    if (elements.empty()) {
+BinaryHeap<Type>::BinaryHeap(function<bool(Type, Type)> compare) {
+    this->compare = compare;
+}
+template <typename Type>
+BinaryHeap<Type>::~BinaryHeap() {
+    this->elements.clear();
+}
+template <typename Type>
+bool BinaryHeap<Type>::isEmpty() {
+    return this->elements.empty();
+}
+template <typename Type>
+Type BinaryHeap<Type>::top() {
+    if (this->elements.empty()) {
         throw;
     }
-    return this->elements[0];
+    return this->elements.front();
 }
 template <typename Type>
-Type BinaryHeap<Type>::maximum() {
-    if (elements.empty()) {
+Type*& BinaryHeap<Type>::sorted() {
+    Type* temp = new Type[this->elements.size()];
+    vector<Type> tempVector;
+    while(!this->isEmpty()) {
+        tempVector.push_back(this->pop());
+    }
+    copy(tempVector.begin(), tempVector.end(), temp);
+    return temp;
+}
+template <typename Type>
+Type BinaryHeap<Type>::pop() {
+    if (this->elements.empty()) {
         throw;
     }
-}
-template <typename Type>
-void BinaryHeap<Type>::insert(Type element) {
-    elements.push_back(element);
-    if (elements.size() != 1) {
-        upheap(elements.size() - 1);
+    Type value = this->top();
+    if(this->elements.size() == 1) {
+        this->elements.pop_back();
     }
+    else {
+        int back = this->elements.back();
+        this->elements[0] = back;
+        this->elements.pop_back();
+        this->downheap(0);
+    }
+    return value;
 }
 template <typename Type>
-void BinaryHeap<Type>::remove(Type element) {
-    
+void BinaryHeap<Type>::push(Type element) {
+    this->elements.push_back(element);
+    int endIndex = this->elements.size() - 1;
+    this->upheap(endIndex);
 }
 template <typename Type>
 void BinaryHeap<Type>::upheap(int index) {
-    if (index == -1) { return; }
-    int parentIndex = (index) / 2 - (index % 2 == 0 ? 1 : 0);
-    if (elements[parentIndex] > elements[index]) {
-        swap(elements[parentIndex], elements[index]);
-        upheap(parentIndex);
+    if (index == 0) { return; }
+    int parentIndex = (index / 2) - (index % 2 == 0 ? 1 : 0);
+    if (this->compare(this->elements[index], this->elements[parentIndex])) {
+        swap(this->elements[parentIndex], this->elements[index]);
+        this->upheap(parentIndex);
     }
 }
 template <typename Type>
 void BinaryHeap<Type>::downheap(int index) {
-    int leftIndex = 2 * index;
-    int rightIndex = 2 * index + 1;
-    int lastIndex = elements.size() - 1;
-    if (leftIndex <= lastIndex) {
-        if (rightIndex <= lastIndex) {
-            if (elements[leftIndex] < elements[rightIndex]) {
-                if (elements[leftIndex] < elements[index]) {
-                    swap(elements[leftIndex], elements[index]);
-                    downheap(leftIndex);
-                }
-                else if (elements[rightIndex] < elements[index]) {
-                    swap(elements[rightIndex], elements[index]);
-                    downheap(rightIndex);
-                }
-            }
-            else {
-                if (elements[rightIndex] < elements[index]) {
-                    swap(elements[rightIndex], elements[index]);
-                    downheap(rightIndex);
-                }
-                else if (elements[leftIndex] < elements[index]) {
-                    swap(elements[leftIndex], elements[index]);
-                    downheap(leftIndex);
-                }
-            }
+    int leftIndex = 2 * index + 1;
+    int rightIndex = 2 * index + 2;
+    int lastIndex = this->elements.size() - 1;
+    if (leftIndex <= lastIndex && rightIndex <= lastIndex) {
+        if (this->compare(this->elements[leftIndex], this->elements[index])) {
+            swap(this->elements[index], this->elements[leftIndex]);
+            this->downheap(leftIndex);
+        } else if(this->compare(this->elements[rightIndex], this->elements[index])) {
+            swap(this->elements[index], this->elements[rightIndex]);
+            this->downheap(rightIndex);
         }
-        else {
-            if (elements[leftIndex] < elements[index]) {
-                swap(elements[leftIndex], elements[index]);
-            }
+    }
+    else if (leftIndex <= lastIndex) {
+        if (this->compare(this->elements[leftIndex], this->elements[index])) {
+            swap(this->elements[index], this->elements[leftIndex]);
+            this->downheap(leftIndex);
         }
     }
 }

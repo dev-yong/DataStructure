@@ -51,22 +51,22 @@ void testBST() {
 }
 void testBinaryHeap() {
     BinaryHeap<int> binaryheap;
-    binaryheap.insert(8);
-    binaryheap.insert(4);
-    binaryheap.insert(12);
-    binaryheap.insert(2);
-    binaryheap.insert(10);
-    binaryheap.remove(10);
+    binaryheap.push(8);
+    binaryheap.push(4);
+    binaryheap.push(12);
+    binaryheap.push(2);
+    binaryheap.pop();
+    binaryheap.push(10);
 }
 
 
 int main() {
 
-    testAbstractList_LinkedList();
-
-    testAbstractSortedList_BST();
-
-    testBST();
+//    testAbstractList_LinkedList();
+//
+//    testAbstractSortedList_BST();
+//
+//    testBST();
 
     testBinaryHeap();
 
