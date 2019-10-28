@@ -31,10 +31,12 @@ public:
     void clear();
 private:
     //MARK:- private
+    // MARK: Accessors
     BinarySearchNode<Type>* minimum(BinarySearchNode<Type>* node);
     BinarySearchNode<Type>* maximum(BinarySearchNode<Type>* node);
     bool find(BinarySearchNode<Type>* node, Type element);
     int height(BinarySearchNode<Type>* node, int depth = 0);
+    // MARK: Mutators
     void insert(BinarySearchNode<Type>* current, Type element);
     void remove(BinarySearchNode<Type>* current, Type element);
     void clear(BinarySearchNode<Type>* current);
@@ -55,35 +57,35 @@ BinarySearchTree<Type>::~BinarySearchTree() {
 }
 template <typename Type>
 bool BinarySearchTree<Type>::isEmpty() {
-    return root == 0;
+    return this->root->isLeaf();
 }
 template <typename Type>
 Type BinarySearchTree<Type>::minimum() {
-    if (isEmpty()) {
+    if (this->isEmpty()) {
         throw; //underflow
     }
-    return minimum(root)->retrieve();
+    return this->minimum(this->root)->retrieve();
 }
 template <typename Type>
 Type BinarySearchTree<Type>::maximum() {
-    if (isEmpty()) {
+    if (this->isEmpty()) {
         throw; //underflow
     }
-    return maximum(root)->retrieve();
+    return this->maximum(this->root)->retrieve();
 }
 template <typename Type>
 bool BinarySearchTree<Type>::find(Type element) {
-    if (isEmpty()) {
+    if (this->isEmpty()) {
         return false;
     }
-    return find(root, element);
+    return this->find(this->root, element);
 }
 template <typename Type>
 int BinarySearchTree<Type>::height() {
     if (this->isEmpty()) {
         return -1;
     }
-    return height(this->root);
+    return this->height(this->root);
 }
 template <typename Type>
 void BinarySearchTree<Type>::log() {
@@ -107,20 +109,20 @@ void BinarySearchTree<Type>::log() {
 }
 template <typename Type>
 void BinarySearchTree<Type>::insert(Type element) {
-    if (isEmpty()) {
+    if (this->isEmpty()) {
         this->root = new BinarySearchNode<Type>(element);
     }
     else {
-        insert(root, element);
+        this->insert(this->root, element);
     }
 }
 template <typename Type>
 void BinarySearchTree<Type>::remove(Type element) {
-    if (isEmpty()) {
+    if (this->isEmpty()) {
         return;
     }
     else {
-        remove(root, element);
+        this->remove(this->root, element);
     }
 }
 template <typename Type>
@@ -132,11 +134,11 @@ void BinarySearchTree<Type>::clear() {
 }
 template <typename Type>
 BinarySearchNode<Type>* BinarySearchTree<Type>::minimum(BinarySearchNode<Type>* node) {
-    return node->hasLeft() ? minimum(node->left) : node;
+    return node->hasLeft() ? this->minimum(node->left) : node;
 }
 template <typename Type>
 BinarySearchNode<Type>* BinarySearchTree<Type>::maximum(BinarySearchNode<Type>* node) {
-    return node->hasRight() ? maximum(node->right) : node;
+    return node->hasRight() ? this->maximum(node->right) : node;
 }
 template <typename Type>
 bool BinarySearchTree<Type>::find(BinarySearchNode<Type>* node, Type element) {
@@ -173,7 +175,7 @@ void BinarySearchTree<Type>::insert(BinarySearchNode<Type>* current, Type elemen
             current->left = newNode;
         }
         else {
-            insert(current->left, element);
+            this->insert(current->left, element);
         }
     }
     else {
@@ -183,7 +185,7 @@ void BinarySearchTree<Type>::insert(BinarySearchNode<Type>* current, Type elemen
             current->right = newNode;
         }
         else {
-            insert(current->right, element);
+            this->insert(current->right, element);
         }
     }
 }
@@ -195,9 +197,9 @@ void BinarySearchTree<Type>::remove(BinarySearchNode<Type>* current, Type elemen
             Type minimumValue = rightMinimumNode->retrieve();
             BinarySearchNode<Type>* newNode = new BinarySearchNode<Type>(minimumValue);
             if (rightMinimumNode->isLeaf()) {
-                removeWhenLeaf(rightMinimumNode);
+                this->removeWhenLeaf(rightMinimumNode);
             } else if (!rightMinimumNode->hasLeft() && rightMinimumNode->hasRight()) {
-                removeWhenHasOnlyRight(rightMinimumNode);
+                this->removeWhenHasOnlyRight(rightMinimumNode);
             }
             newNode->parent = current->parent;
             newNode->left = current->left;
@@ -208,35 +210,35 @@ void BinarySearchTree<Type>::remove(BinarySearchNode<Type>* current, Type elemen
             delete current;
         }
         else if (current->hasLeft() && !current->hasRight()) {
-            removeWhenHasOnlyLeft(current);
+            this->removeWhenHasOnlyLeft(current);
         }
         else if (!current->hasLeft() && current->hasRight()) {
-            removeWhenHasOnlyRight(current);
+            this->removeWhenHasOnlyRight(current);
         }
         else {
-            removeWhenLeaf(current);
+            this->removeWhenLeaf(current);
         }
     }
     else if (current->retrieve() > element) {
-        remove(current->left, element);
+        this->remove(current->left, element);
     }
     else {
-        remove(current->right, element);
+        this->remove(current->right, element);
     }
 }
 template <typename Type>
 void BinarySearchTree<Type>::clear(BinarySearchNode<Type>* current) {
     if (current->hasLeft() && current->hasRight()) {
-        clear(current->left);
-        clear(current->right);
+        this->clear(current->left);
+        this->clear(current->right);
     }
     else if (current->hasLeft() && !current->hasRight()) {
-        clear(current->left);
+        this->clear(current->left);
     }
     else if (!current->hasLeft() && current->hasRight()) {
-        clear(current->right);
+        this->clear(current->right);
     }
-    removeWhenLeaf(current);
+    this->removeWhenLeaf(current);
 }
 template <typename Type>
 void BinarySearchTree<Type>::removeWhenLeaf(BinarySearchNode<Type>* current) {
