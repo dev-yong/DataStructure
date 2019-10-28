@@ -58,6 +58,16 @@ void testBinaryHeap() {
     binaryheap.pop();
     binaryheap.push(10);
 }
+void testAbstractPriorityQueue_BinaryHeap() {
+    AbstractPriorityQueue<int>* priorityQueue = new AbstractPriorityQueue_BinaryHeap<int>();
+    priorityQueue->push(8);
+    priorityQueue->push(4);
+    priorityQueue->push(12);
+    priorityQueue->push(2);
+    priorityQueue->pop();
+    priorityQueue->push(10);
+    delete priorityQueue;
+}
 
 
 int main() {
@@ -69,6 +79,8 @@ int main() {
 //    testBST();
 
     testBinaryHeap();
+
+    testAbstractPriorityQueue_BinaryHeap();
 
     return 0;
 }

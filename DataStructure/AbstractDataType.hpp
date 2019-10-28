@@ -20,5 +20,6 @@
 #include "List/AbstractSortedList_BST.cpp"
 // MARK: AbstractPriorityQueue
 #include "PriorityQueue/AbstractPriorityQueue.hpp"
+#include "PriorityQueue/AbstractPriorityQueue_BinaryHeap.cpp"
 
 #endif /* AbstractDataType_hpp */

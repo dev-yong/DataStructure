@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1850262366CD9800C905F9 /* AbstractPriorityQueue_BinaryHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC1850252366CD9800C905F9 /* AbstractPriorityQueue_BinaryHeap.cpp */; };
 		FC7842D1235824DA002F6396 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E8E2354576C00DA40BC /* LinkedList.cpp */; };
 		FC7842D2235824DA002F6396 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E912354580300DA40BC /* Node.cpp */; };
 		FC7842D3235824DA002F6396 /* AbstractList_LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCC06E8A2354572300DA40BC /* AbstractList_LinkedList.cpp */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC1850252366CD9800C905F9 /* AbstractPriorityQueue_BinaryHeap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractPriorityQueue_BinaryHeap.cpp; sourceTree = "<group>"; };
 		FC7842C323580BBC002F6396 /* AbstractSortedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AbstractSortedList.hpp; sourceTree = "<group>"; };
 		FC7842CB23581060002F6396 /* AbstractSortedList_BST.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractSortedList_BST.cpp; sourceTree = "<group>"; };
 		FC7842CE23581A06002F6396 /* AbstractDataType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AbstractDataType.hpp; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC5350E23587A6200CFAF37 /* AbstractPriorityQueue.hpp */,
+				FC1850252366CD9800C905F9 /* AbstractPriorityQueue_BinaryHeap.cpp */,
 			);
 			path = PriorityQueue;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				FC7842D3235824DA002F6396 /* AbstractList_LinkedList.cpp in Sources */,
 				FCC53508235879B400CFAF37 /* BinaryHeap.cpp in Sources */,
 				FCC06E7A2353FB9800DA40BC /* main.cpp in Sources */,
+				FC1850262366CD9800C905F9 /* AbstractPriorityQueue_BinaryHeap.cpp in Sources */,
 				FC7842D7235824DA002F6396 /* (null) in Sources */,
 				FC7842D4235824DA002F6396 /* AbstractList_TwoEndedArray.cpp in Sources */,
 			);
