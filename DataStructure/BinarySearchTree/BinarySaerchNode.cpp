@@ -18,19 +18,10 @@ public:
         left = 0;
         right = 0;
     }
-
-    Type retrieve() {
-        return this->element;
-    }
-    bool isLeaf() {
-        return this->left == 0 && this->right == 0;
-    }
-    bool hasLeft() {
-        return this->left != 0;
-    }
-    bool hasRight() {
-        return this->right != 0;
-    }
+    Type retrieve();
+    bool isLeaf();
+    bool hasLeft();
+    bool hasRight();
     BinarySearchNode<Type>* parent;
     BinarySearchNode<Type>* left;
     BinarySearchNode<Type>* right;
@@ -39,3 +30,20 @@ private:
     Type element;
 
 };
+
+template <typename Type>
+Type BinarySearchNode<Type>::retrieve() {
+    return this->element;
+}
+template <typename Type>
+bool BinarySearchNode<Type>::isLeaf() {
+    return this->left == 0 && this->right == 0;
+}
+template <typename Type>
+bool BinarySearchNode<Type>::hasLeft() {
+    return this->left != 0;
+}
+template <typename Type>
+bool BinarySearchNode<Type>::hasRight() {
+    return this->right != 0;
+}
