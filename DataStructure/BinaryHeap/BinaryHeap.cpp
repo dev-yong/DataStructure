@@ -21,11 +21,12 @@ public:
     ~BinaryHeap();
     //MARK: Accessors
     bool isEmpty();
-    Type top();
+    Type front();
     Type*& sorted();
     //MARK: Mutators
     void push(Type element);
     Type pop();
+    void clear();
 
 private:
     //MARK:- private
@@ -42,14 +43,14 @@ BinaryHeap<Type>::BinaryHeap(function<bool(Type, Type)> compare) {
 }
 template <typename Type>
 BinaryHeap<Type>::~BinaryHeap() {
-    this->elements.clear();
+    this->clear();
 }
 template <typename Type>
 bool BinaryHeap<Type>::isEmpty() {
     return this->elements.empty();
 }
 template <typename Type>
-Type BinaryHeap<Type>::top() {
+Type BinaryHeap<Type>::front() {
     if (this->elements.empty()) {
         throw;
     }
@@ -70,7 +71,7 @@ Type BinaryHeap<Type>::pop() {
     if (this->elements.empty()) {
         throw;
     }
-    Type value = this->top();
+    Type value = this->front();
     if(this->elements.size() == 1) {
         this->elements.pop_back();
     }
@@ -117,4 +118,8 @@ void BinaryHeap<Type>::downheap(int index) {
             this->downheap(leftIndex);
         }
     }
+}
+template <typename Type>
+void BinaryHeap<Type>::clear() {
+    this->elements.clear();
 }
