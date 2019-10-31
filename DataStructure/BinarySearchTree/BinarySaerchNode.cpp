@@ -13,7 +13,7 @@ using namespace std;
 template <typename Type>
 class BinarySearchNode {
 public:
-    BinarySearchNode(Type& element): element(element) {
+    BinarySearchNode(Type element): element(element) {
         parent = 0;
         left = 0;
         right = 0;
